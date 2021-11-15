@@ -4,15 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/ic_launcher_background"
+    tools:context=".activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <RelativeLayout
+        android:id="@+id/wifiRL"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#16909D"
+        app:layout_constraintBottom_toTopOf="@+id/btRL"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/wifiBtn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/wifi_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/wifiRL"
+        android:background="#16A25B"
+        android:id="@+id/btRL"
+        android:layout_height="0dp">
 
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/bluetoothBtn"
+            android:background="@drawable/bluetooth_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

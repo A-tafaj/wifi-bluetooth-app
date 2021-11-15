@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Ali.WifiBtApp</string>
+    <string name="password">Password:</string>
+    <string name="connect">Connect</string>
 </resources>
